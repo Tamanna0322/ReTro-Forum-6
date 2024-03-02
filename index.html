@@ -1,11 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ReTro-Forum</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/78e2db45b7.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+    <header class="container mx-auto lg:px-48 px-5 mt-10">
+        <nav>
+            <div class="navbar bg-base-100 flex justify-between">
+                <div class="">
+                   
+                    <a class="text-3xl font-extrabold text-[#12132D]">ReTro</a>
+                </div>
+
+                <div>
+                    <div class="space-x-3 lg:flex hidden">
+                        <div class="tooltip tooltip-bottom" data-tip="home">
+                            <span class="border-2 p-4 rounded-full bg-slate-100 hover:"><i
+                                    class="fa-solid fa-house"></i></span>
+                        </div>
+                        <div class="tooltip tooltip-bottom" data-tip="edit">
+                            <span class="border-2 p-4 rounded-full bg-slate-100 hover:"><i
+                                    class="fa-solid fa-pen"></i></span>
+                        </div>
+                        <div class="tooltip tooltip-bottom" data-tip="add">
+                            <span class="border-2 p-4 rounded-full bg-slate-100 hover:"><i
+                                    class="fa-solid fa-user-plus"></i></span>
+                        </div>
+                        <div class="tooltip tooltip-bottom" data-tip="flag">
+                            <span class="border-2 p-4 rounded-full bg-slate-100 hover:"><i
+                                    class="fa-regular fa-flag"></i></span>
+                        </div>
     
+                    </div>
+                    <div class=" ml-8 ">
+                       <button class="btn text-white px-8 py-3 bg-[#797DFC] border-none rounded-3xl">Sign In</button>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+        <section class="lg:h-[550px] h-[400px] lg:mt-8 mt-5 w-full bg-[url(images/bgbanner.png)] bg-[#12132D] bg-no-repeat bg-bottom rounded-3xl lg:p-14">
+              <div class="flex flex-col lg:flex-row text-white justify-around items-center h-full">
+                <div class="lg:w-[56%] w-[70%] lg:space-y-7 space-y-2">
+                   <h2 class="lg:text-5xl text-xl font-bold ">Welcome to the <br><span class="text-[#797DFC]">ReTro</span> Forum</h2>
+                   <p>Share your favorite opinion and win and wp <br> forum coffee mug!</p>
+                   <label class="input input-bordered flex items-center lg:w-1/2 rounded-3xl lg:py-3">
+                    <input type="text" class="lg:grow text-[#03071280]" placeholder="Search here anything" />
+                    <button class="btn text-white bg-[#797DFC] px-5 rounded-3xl py-1 border-none">Search</button>
+                  </label>
+                </div>
+                <div class="lg:w-[30%] w-[70%] bg-white rounded-3xl lg:p-12 p-5">
+                         <div class="flex justify-between text-[#12132DCC] text-xl">
+                            <h4>Registered Users</h4>
+                            <p>01</p>
+                         </div>
+                         <div class="flex justify-between text-[#12132DCC] text-xl">
+                            <h4>Forum</h4>
+                            <p>05</p>
+                         </div>
+                         <div class="flex justify-between text-[#12132DCC] text-xl">
+                            <h4>Topics</h4>
+                            <p>01</p>
+                         </div>
+                         <div class="flex justify-between text-[#12132DCC] text-xl">
+                            <h4>Replies</h4>
+                            <p>01</p>
+                         </div>
+                </div>
+              </div>
+        </section>
+
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
