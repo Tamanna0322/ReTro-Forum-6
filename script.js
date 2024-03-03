@@ -4,6 +4,7 @@ const loadCard = async(cardId) =>{
     // console.log(data.posts);
     const posts = data.posts;
     // console.log(posts);
+    loadingSpinner(false);
     const cardContainer = document.getElementById('card-container');
     cardContainer.innerHTML = '';
     posts.forEach( (item) => {
@@ -107,17 +108,32 @@ function addTitle(title, view){
 
 
 function search(){
+    loadingSpinner(true);
     const inputField = document.getElementById('input-field');
     const inputVal = inputField.value;
     // console.log(inputVal);
     if(inputVal){
-       loadCard(inputVal);
+       setTimeout(() => {
+        loadCard(inputVal);
+       }, 2000);
+       loadingSpinner(true);
        const cardContainer = document.getElementById('card-container');
        cardContainer.scrollIntoView({ behavior: 'smooth' });
     }
     else{
         alert('Enter any valid input');
+        loadingSpinner(false);
     }
+}
+
+function loadingSpinner(isLoading){
+         const spinner = document.getElementById('spinner');
+         if(isLoading){
+            spinner.classList.remove('hidden');
+         }
+         else{
+            spinner.classList.add('hidden');
+         }
 }
 
 loadCard('music');

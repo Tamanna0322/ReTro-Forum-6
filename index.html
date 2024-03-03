@@ -57,7 +57,8 @@
 
                     <label
                         class="input input-bordered flex relative justify-between items-center lg:w-1/2 rounded-3xl lg:py-5 ">
-                        <input id="input-field" type="text" class="lg:grow text-[#03071280]" placeholder="Search here anything" />
+                        <input id="input-field" type="text" class="lg:grow text-[#03071280]"
+                            placeholder="Search here anything" />
                         <button onclick="search()"
                             class="btn absolute left-[80%] text-white bg-[#797DFC] px-5 rounded-3xl py-1 border-none ">Search</button>
                     </label>
@@ -90,26 +91,34 @@
         <section>
             <div class="text-center lg:space-y-6 space-y-3">
                 <h2 class="lg:text-4xl text-2xl font-extrabold text-[#12132D]">Let's Discuss</h2>
-                <p class="lg:text-xl text-[#12132D99] w-3/4 mx-auto">Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit. Rem voluptatem debitis natus quis enim delectus</p>
+                <p class="lg:text-xl text-[#12132D99] w-3/4 mx-auto">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.</p>
+            </div>
+            <!-- spinner -->
+            <div id="spinner" class="text-center mt-4 hidden">
+                <span class="loading loading-bars loading-xs"></span>
+                <span class="loading loading-bars loading-sm"></span>
+                <span class="loading loading-bars loading-md"></span>
+                <span class="loading loading-bars loading-lg"></span>
             </div>
             <div class="lg:mt-8 mt-3 flex flex-col lg:flex-row justify-between">
                 <!-- card section -->
-               <div id="card-container" class="lg:w-[60%]">
-                
-               </div>
+                <div id="card-container" class="lg:w-[60%]">
+
+                </div>
 
                 <!-- title section -->
                 <div class="lg:w-[40%] ml-6 mt-6 ">
                     <div id="title-section" class="p-7 bg-gray-100 rounded-2xl">
                         <div class="flex justify-between mb-7">
                             <h2 class="text-[#12132D] text-xl font-bold">Title</h2>
-                            <p class="text-[#12132D99] font-bold"><i class="fa-solid text-green-600 fa-check-double"></i> Mark as read (<span id="mark-as">0</span>)</p>
+                            <p class="text-[#12132D99] font-bold"><i
+                                    class="fa-solid text-green-600 fa-check-double"></i> Mark as read (<span
+                                    id="mark-as">0</span>)</p>
                         </div>
-                        
-                       
+
+
                     </div>
-                      
+
                 </div>
             </div>
         </section>
