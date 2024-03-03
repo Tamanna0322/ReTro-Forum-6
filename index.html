@@ -22,19 +22,19 @@
                 <div>
                     <div class="space-x-3 lg:flex hidden">
                         <div class="tooltip tooltip-bottom" data-tip="home">
-                            <span class="border-2 p-4 rounded-full bg-slate-100 hover:"><i
+                            <span class="border-2 p-4 rounded-2xl bg-slate-100 hover:"><i
                                     class="fa-solid fa-house"></i></span>
                         </div>
                         <div class="tooltip tooltip-bottom" data-tip="edit">
-                            <span class="border-2 p-4 rounded-full bg-slate-100 hover:"><i
+                            <span class="border-2 p-4 rounded-2xl bg-slate-100 hover:"><i
                                     class="fa-solid fa-pen"></i></span>
                         </div>
                         <div class="tooltip tooltip-bottom" data-tip="add">
-                            <span class="border-2 p-4 rounded-full bg-slate-100 hover:"><i
+                            <span class="border-2 p-4 rounded-2xl bg-slate-100 hover:"><i
                                     class="fa-solid fa-user-plus"></i></span>
                         </div>
                         <div class="tooltip tooltip-bottom" data-tip="flag">
-                            <span class="border-2 p-4 rounded-full bg-slate-100 hover:"><i
+                            <span class="border-2 p-4 rounded-2xl bg-slate-100 hover:"><i
                                     class="fa-regular fa-flag"></i></span>
                         </div>
 
@@ -57,8 +57,8 @@
 
                     <label
                         class="input input-bordered flex relative justify-between items-center lg:w-1/2 rounded-3xl lg:py-5 ">
-                        <input type="text" class="lg:grow text-[#03071280]" placeholder="Search here anything" />
-                        <button
+                        <input id="input-field" type="text" class="lg:grow text-[#03071280]" placeholder="Search here anything" />
+                        <button onclick="search()"
                             class="btn absolute left-[80%] text-white bg-[#797DFC] px-5 rounded-3xl py-1 border-none ">Search</button>
                     </label>
 

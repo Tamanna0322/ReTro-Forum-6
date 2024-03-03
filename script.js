@@ -1,14 +1,14 @@
-const loadCard = async() =>{
-    const response = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts');
+const loadCard = async(cardId) =>{
+    const response = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${cardId}`);
     const data = await response.json();
     // console.log(data.posts);
     const posts = data.posts;
-    console.log(posts);
+    // console.log(posts);
+    const cardContainer = document.getElementById('card-container');
+    cardContainer.innerHTML = '';
     posts.forEach( (item) => {
         console.log(item);
-        const cardContainer = document.getElementById('card-container');
         const div = document.createElement('div');
-        let sum = 0;
         div.innerHTML= `
         <div class=" lg:p-8 p-4 rounded-3xl bg-slate-100 mt-6">
         <div class="flex space-x-7 justify-start">
@@ -62,7 +62,7 @@ const loadCard = async() =>{
                     </div>
                     <div>
                         <button onclick="addTitle('${item.title}','${item.view_count}')"
-                            class="bg-green-500 h-[30px] w-[30px] rounded-full text-white flex justify-center items-center">
+                            class="bg-green-500 h-[35px] w-[35px] rounded-full text-white flex justify-center items-center">
                             <i class="fa-solid fa-envelope-open"></i>
                         </button>
                     </div>
@@ -80,11 +80,13 @@ const loadCard = async() =>{
 
 }
 
+let sum = 0;
 
 function addTitle(title, view){
-    
+    sum++;
     console.log(title,view);
     const markAsRead = document.getElementById('mark-as');
+    markAsRead.innerText = sum;
 
     const titleSection = document.getElementById('title-section');
     const div = document.createElement('div');
@@ -104,5 +106,18 @@ function addTitle(title, view){
 }
 
 
+function search(){
+    const inputField = document.getElementById('input-field');
+    const inputVal = inputField.value;
+    // console.log(inputVal);
+    if(inputVal){
+       loadCard(inputVal);
+       const cardContainer = document.getElementById('card-container');
+       cardContainer.scrollIntoView({ behavior: 'smooth' });
+    }
+    else{
+        alert('Enter any valid input');
+    }
+}
 
-loadCard();
+loadCard('music');
