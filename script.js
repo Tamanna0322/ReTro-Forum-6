@@ -12,7 +12,7 @@ const loadCard = async(cardId) =>{
         const div = document.createElement('div');
         div.innerHTML= `
         <div class=" lg:p-8 p-4 rounded-3xl bg-slate-100 mt-6">
-        <div class="flex space-x-7 justify-start">
+        <div class="flex lg:space-x-7 space-x-3 justify-start">
             <div class="lg:h-[80px] lg:w-[80px] h-[70px] w-[70px] relative">
                 <img class="w-full rounded-xl"
                     src="${item.image}" alt="">
@@ -20,7 +20,7 @@ const loadCard = async(cardId) =>{
                 </div>
             </div>
             <div class="space-y-3 w-[80%]">
-                <div class="space-x-9 text-[#12132DCC] font-semibold">
+                <div class="lg:space-x-9 text-[#12132DCC] font-semibold">
                     <span># ${item.category}</span>
                     <span>Authore: ${item.author.name}</span>
                 </div>
@@ -28,7 +28,7 @@ const loadCard = async(cardId) =>{
                     <h3 class="lg:text-xl mb-3 font-bold text-[#12132D]">${item.title}</h3>
                 </div>
                 <div>
-                    <p class="w-3/4 text-[#12132D99]">${item.description}</p>
+                    <p class="lg:w-3/4 text-[#12132D99]">${item.description}</p>
                 </div>
                 <hr>
                 <div class="flex justify-between">
